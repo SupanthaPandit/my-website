@@ -1,1 +1,484 @@
-<p> hello </p>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dr. Supantha Pandit</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f5f7fa;
+color:#333;
+line-height:1.7;
+}
+
+header{
+height:100vh;
+background:linear-gradient(135deg,#00416A,#007991,#00C9A7);
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+}
+
+.hero{
+max-width:800px;
+padding:30px;
+}
+
+.hero img{
+width:180px;
+height:180px;
+border-radius:50%;
+border:6px solid white;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+margin-bottom:25px;
+}
+
+.hero h1{
+font-size:3.2rem;
+margin-bottom:10px;
+}
+
+.hero h2{
+font-weight:300;
+margin-bottom:20px;
+}
+
+.hero p{
+font-size:18px;
+margin-bottom:30px;
+}
+
+.hero a{
+text-decoration:none;
+background:white;
+color:#00416A;
+padding:15px 35px;
+border-radius:40px;
+font-weight:bold;
+transition:.3s;
+}
+
+.hero a:hover{
+background:#FFD54F;
+}
+
+nav{
+position:sticky;
+top:0;
+background:white;
+box-shadow:0 5px 15px rgba(0,0,0,.1);
+z-index:999;
+}
+
+nav ul{
+display:flex;
+justify-content:center;
+list-style:none;
+flex-wrap:wrap;
+}
+
+nav li{
+margin:15px;
+}
+
+nav a{
+text-decoration:none;
+font-weight:600;
+color:#00416A;
+}
+
+section{
+padding:80px 10%;
+}
+
+.section-title{
+text-align:center;
+font-size:36px;
+margin-bottom:50px;
+color:#00416A;
+}
+
+.about{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:50px;
+align-items:center;
+}
+
+.about img{
+width:100%;
+border-radius:15px;
+}
+
+.card-container{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:25px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:12px;
+box-shadow:0 10px 20px rgba(0,0,0,.08);
+transition:.3s;
+}
+
+.card:hover{
+transform:translateY(-10px);
+}
+
+.card h3{
+color:#007991;
+margin-bottom:15px;
+}
+
+.timeline{
+border-left:4px solid #007991;
+padding-left:30px;
+}
+
+.timeline div{
+margin-bottom:30px;
+}
+
+footer{
+background:#00416A;
+color:white;
+text-align:center;
+padding:30px;
+}
+
+@media(max-width:800px){
+
+.hero h1{
+font-size:2.2rem;
+}
+
+.about{
+grid-template-columns:1fr;
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="hero">
+
+<img src="https://via.placeholder.com/200" alt="Profile">
+
+<h1>Dr. Supantha Pandit</h1>
+
+<h2>Associate Professor</h2>
+
+<p>
+School of Technology<br>
+Computer Science & Information Systems<br>
+Dhirubhai Ambani University
+</p>
+
+<a href="#about">Explore</a>
+
+</div>
+
+</header>
+
+<nav>
+
+<ul>
+
+<li><a href="#about">About</a></li>
+<li><a href="#research">Research</a></li>
+<li><a href="#publications">Publications</a></li>
+<li><a href="#teaching">Teaching</a></li>
+<li><a href="#projects">Projects</a></li>
+<li><a href="#contact">Contact</a></li>
+
+</ul>
+
+</nav>
+
+<section id="about">
+
+<h2 class="section-title">About Me</h2>
+
+<div class="about">
+
+<div>
+
+<h3>Biography</h3>
+
+<p>
+
+I am an Associate Professor in the School of Technology,
+Computer Science & Information Systems,
+Dhirubhai Ambani University.
+
+My research interests include
+
+<ul>
+
+<li>Distributed Algorithms</li>
+
+<li>Mobile Robots</li>
+
+<li>Computational Geometry</li>
+
+<li>Approximation Algorithms</li>
+
+<li>Parameterized Complexity</li>
+
+<li>Graph Algorithms</li>
+
+</ul>
+
+</p>
+
+</div>
+
+<div>
+
+<img src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=900" alt="University">
+
+</div>
+
+</div>
+
+</section>
+
+<section id="research">
+
+<h2 class="section-title">Research Areas</h2>
+
+<div class="card-container">
+
+<div class="card">
+<h3>Distributed Computing</h3>
+<p>
+Algorithms for mobile robots, anonymous networks,
+dispersion, gathering and exploration.
+</p>
+</div>
+
+<div class="card">
+<h3>Computational Geometry</h3>
+<p>
+Approximation algorithms, geometric optimization,
+covering and hitting set problems.
+</p>
+</div>
+
+<div class="card">
+<h3>Parameterized Algorithms</h3>
+<p>
+Kernelization, FPT algorithms and graph problems.
+</p>
+</div>
+
+</div>
+
+</section>
+
+<section id="publications">
+
+<h2 class="section-title">Selected Publications</h2>
+
+<div class="timeline">
+
+<div>
+
+<h3>2026</h3>
+
+<p>
+Efficient Dispersion in Triangular Grids.
+<b>Theoretical Computer Science</b>
+
+</p>
+
+</div>
+
+<div>
+
+<h3>2025</h3>
+
+<p>
+Deterministic Dispersion under Beeping Model.
+<b>Journal of Parallel and Distributed Computing</b>
+
+</p>
+
+</div>
+
+<div>
+
+<h3>2024</h3>
+
+<p>
+Approximation Algorithms for Geometric Problems.
+<b>Computational Geometry</b>
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="teaching">
+
+<h2 class="section-title">Teaching</h2>
+
+<div class="card-container">
+
+<div class="card">
+
+<h3>Data Structures</h3>
+
+<p>
+
+Arrays, Linked Lists, Trees, Graphs,
+Hashing, Heaps, Sorting.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Design & Analysis of Algorithms</h3>
+
+<p>
+
+Greedy, Divide & Conquer,
+Dynamic Programming,
+Network Flow,
+Approximation.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Theory of Computation</h3>
+
+<p>
+
+Automata Theory,
+Formal Languages,
+Turing Machines,
+Complexity Theory.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="projects">
+
+<h2 class="section-title">Research Projects</h2>
+
+<div class="card-container">
+
+<div class="card">
+
+<h3>Mobile Robot Dispersion</h3>
+
+<p>
+
+Deterministic algorithms for mobile robots
+under local communication models.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Graph Algorithms</h3>
+
+<p>
+
+Approximation and parameterized algorithms
+for NP-hard optimization problems.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>Distributed Network Algorithms</h3>
+
+<p>
+
+Anonymous networks,
+leader election,
+exploration and gathering.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<section id="contact">
+
+<h2 class="section-title">Contact</h2>
+
+<div class="card">
+
+<p>
+
+<b>Dr. Supantha Pandit</b><br><br>
+
+School of Technology<br>
+
+Dhirubhai Ambani University<br>
+
+Gandhinagar, Gujarat, India<br><br>
+
+Email:
+supantha_pandit@dau.ac.in
+
+</p>
+
+</div>
+
+</section>
+
+<footer>
+
+© 2026 Dr. Supantha Pandit | Academic Homepage
+
+</footer>
+
+</body>
+</html>
