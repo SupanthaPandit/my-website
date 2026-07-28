@@ -1,79 +1,149 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Data Structures | Dr. Supantha Pandit</title>
+<title>IT639: Data Structures | Dr. Supantha Pandit</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
+html{
+    scroll-behavior:smooth;
+}
+
 body{
-font-family:Arial,Helvetica,sans-serif;
-background:#f4f7fb;
-margin:0;
-line-height:1.8;
+    margin:0;
+    font-family:'Poppins',sans-serif;
+    background:#f5f7fa;
+    color:#333;
+    line-height:1.7;
 }
 
 header{
-background:#00416A;
-color:white;
-padding:50px;
-text-align:center;
+    background:linear-gradient(135deg,#00416A,#007991,#00C9A7);
+    color:white;
+    text-align:center;
+    padding:60px 20px 40px;
+}
+
+header h1{
+    margin:0;
+    font-size:42px;
+}
+
+header p{
+    font-size:20px;
+    margin:10px 0 30px;
+}
+
+.nav-buttons{
+    margin-top:25px;
+}
+
+.nav-buttons a{
+    display:inline-block;
+    margin:6px;
+    padding:10px 18px;
+    text-decoration:none;
+    background:white;
+    color:#00416A;
+    border-radius:25px;
+    font-weight:600;
+    transition:0.3s;
+}
+
+.nav-buttons a:hover{
+    background:#FFD54F;
 }
 
 .container{
-width:85%;
-margin:auto;
-padding:40px 0;
+    width:90%;
+    max-width:1050px;
+    margin:40px auto;
 }
 
 .card{
-background:white;
-padding:25px;
-margin-bottom:25px;
-border-radius:10px;
-box-shadow:0 5px 15px rgba(0,0,0,.1);
+    background:white;
+    border-radius:12px;
+    box-shadow:0 10px 20px rgba(0,0,0,0.08);
+    padding:30px;
+    margin-bottom:35px;
 }
 
 h2{
-color:#00416A;
+    color:#00416A;
+    border-bottom:3px solid #007991;
+    padding-bottom:8px;
+    margin-top:0;
 }
 
 table{
-width:100%;
-border-collapse:collapse;
-}
-
-table th, table td{
-border:1px solid #ddd;
-padding:10px;
+    width:100%;
+    border-collapse:collapse;
+    margin-top:15px;
 }
 
 table th{
-background:#007991;
-color:white;
+    background:#007991;
+    color:white;
+    padding:12px;
+    text-align:left;
+}
+
+table td{
+    border:1px solid #ddd;
+    padding:12px;
+    vertical-align:top;
+}
+
+table tr:nth-child(even){
+    background:#f7fbfc;
+}
+
+ul,ol{
+    padding-left:25px;
 }
 
 .button{
-display:inline-block;
-padding:12px 25px;
-background:#007991;
-color:white;
-text-decoration:none;
-border-radius:30px;
+    display:inline-block;
+    padding:12px 26px;
+    text-decoration:none;
+    background:#007991;
+    color:white;
+    border-radius:25px;
+    font-weight:600;
+    transition:0.3s;
 }
 
 .button:hover{
-background:#00416A;
+    background:#00416A;
+}
+
+.topbtn{
+    display:inline-block;
+    margin-top:20px;
+    padding:8px 18px;
+    text-decoration:none;
+    color:white;
+    background:#007991;
+    border-radius:20px;
+    transition:0.3s;
+}
+
+.topbtn:hover{
+    background:#00416A;
 }
 
 footer{
-background:#00416A;
-color:white;
-text-align:center;
-padding:20px;
-margin-top:40px;
+    margin-top:50px;
+    background:#00416A;
+    color:white;
+    text-align:center;
+    padding:25px;
 }
 
 </style>
@@ -82,130 +152,447 @@ margin-top:40px;
 
 <body>
 
-<header>
+<header id="top">
 
-<h1>Data Structures</h1>
+<h1>IT639: Data Structures</h1>
 
-<p>Course Page</p>
+<p>M.Sc. Information Technology • Autumn 2026–2027</p>
+
+<div class="nav-buttons">
+
+<a href="#info">Course Information</a>
+
+<a href="#description">Description</a>
+
+<a href="#outcomes">Outcomes</a>
+
+<a href="#evaluation">Evaluation</a>
+
+<a href="#plan">Course Plan</a>
+
+<!--<a href="#schedule">Weekly Schedule</a -->
+
+<a href="#books">References</a>
+
+<a href="#lectures">Lectures</a>
+
+<a href="index.html">Home</a>
+
+</div>
 
 </header>
 
 <div class="container">
 
-<div class="card">
+<!-- ================================================= -->
+
+<div class="card" id="info">
 
 <h2>Course Information</h2>
-
-<p><b>Course Code:</b> IT623</p>
-<p><b>Instructor:</b> Dr. Supantha Pandit</p>
-<p><b>Credits:</b> 4</p>
-
-</div>
-
-<div class="card">
-
-<h2>Course Topics</h2>
-
-<ul>
-<li>Introduction to Data Structures</li>
-<li>Algorithm Analysis</li>
-<li>Arrays</li>
-<li>Linked Lists</li>
-<li>Stacks</li>
-<li>Queues</li>
-<li>Trees</li>
-<li>Binary Search Trees</li>
-<li>Heaps</li>
-<li>Hash Tables</li>
-<li>Graphs</li>
-<li>Sorting Algorithms</li>
-</ul>
-
-</div>
-
-<div class="card">
-
-<h2>Lecture Schedule</h2>
 
 <table>
 
 <tr>
-<th>Week</th>
-<th>Topics</th>
+<th style="width:30%">Item</th>
+<th>Details</th>
+</tr>
+
+
+<tr>
+<td><b>Instructor</b></td>
+<td>Dr. Supantha Pandit</td>
 </tr>
 
 <tr>
-<td>1</td>
-<td>Introduction & Complexity Analysis</td>
+<td><b>Email</b></td>
+<td>supantha_pandit[at]dau.ac.in</td>
 </tr>
 
 <tr>
-<td>2</td>
-<td>Arrays and Linked Lists</td>
+<td><b>Prerequisites</b></td>
+<td>Discrete Mathematics, C Programming</td>
 </tr>
 
 <tr>
-<td>3</td>
-<td>Stacks and Queues</td>
+<td><b>Programme</b></td>
+<td>M.Sc. Information Technology, Semester I</td>
 </tr>
 
 <tr>
-<td>4</td>
-<td>Trees</td>
+<td><b>Credits</b></td>
+<td>4 (3-0-2)</td>
 </tr>
 
 <tr>
-<td>5</td>
-<td>Binary Search Trees</td>
-</tr>
-
-<tr>
-<td>6</td>
-<td>Heaps</td>
-</tr>
-
-<tr>
-<td>7</td>
-<td>Hashing</td>
-</tr>
-
-<tr>
-<td>8</td>
-<td>Graphs</td>
-</tr>
-
-<tr>
-<td>9</td>
-<td>Sorting Algorithms</td>
+<td><b>Foundation For</b></td>
+<td>Computer Science and Information Technology Courses</td>
 </tr>
 
 </table>
 
+<div style="text-align:right">
+<a class="topbtn" href="#top">↑ Top</a>
 </div>
-
-<div class="card">
-
-<h2>Resources</h2>
-
-<ul>
-<li>Lecture Slides</li>
-<li>Assignments</li>
-<li>Programming Exercises</li>
-<li>Previous Question Papers</li>
-<li>Reference Books</li>
-</ul>
 
 </div>
 
-<a class="button" href="index.html">← Back to Home</a>
+<!-- ================================================= -->
+
+<div class="card" id="description">
+
+<h2>Course Description</h2>
+
+<p>
+
+This course introduces the fundamental concepts of data structures
+and algorithm analysis with emphasis on designing efficient computational
+solutions. Students learn the representation and implementation of
+linear and non-linear data structures including arrays, linked lists,
+stacks, queues, hash tables, heaps, binary search trees, AVL trees,
+Red-Black trees and B-Trees.
+
+</p>
+
+<p>
+
+The course also covers dictionary operations, searching, sorting,
+priority queues, order statistics, graph representations, Breadth-First
+Search (BFS) and Depth-First Search (DFS). Students develop the ability
+to analyze algorithm efficiency using asymptotic notations and
+recurrence relations and to select appropriate data structures for
+solving computational problems efficiently.
+
+</p>
+
+<div style="text-align:right">
+<a class="topbtn" href="#top">↑ Top</a>
+</div>
+
+  </div>
+
+
+<!-- ================================================= -->
+
+<div class="card" id="outcomes">
+
+<h2>Course Outcomes</h2>
+
+<p>
+After successful completion of the course, the student will be able to:
+</p>
+
+<ol>
+
+<li>
+Analyze the time and space complexity of algorithms using asymptotic
+notations and recurrence relations.
+</li>
+
+<li>
+Select and implement appropriate linear and non-linear data structures
+to solve computational problems efficiently.
+</li>
+
+<li>
+Design and analyze fundamental algorithms for searching, sorting,
+hashing and order statistics.
+</li>
+
+<li>
+Apply advanced tree-based data structures including AVL Trees,
+Red-Black Trees, Heaps and B-Trees to support efficient dictionary
+operations.
+</li>
+
+<li>
+Represent graphs using suitable data structures and apply graph
+traversal algorithms such as Breadth-First Search (BFS) and
+Depth-First Search (DFS).
+</li>
+
+</ol>
+
+
+
+<!-- ================================================= -->
+
+<div class="card" id="evaluation">
+
+<h2>Evaluation Scheme</h2>
+
+<table>
+
+<tr>
+<th>Component</th>
+<th>Weightage</th>
+</tr>
+
+<tr>
+<td>In-Semester Examination I</td>
+<td>20%</td>
+</tr>
+
+<tr>
+<td>In-Semester Examination II</td>
+<td>20%</td>
+</tr>
+
+<tr>
+<td>Course Project / Laboratory Assignments</td>
+<td>20%</td>
+</tr>
+
+<tr>
+<td>End-Semester Examination</td>
+<td>40%</td>
+</tr>
+
+</table>
+
+<p style="margin-top:20px;">
+<b>Note:</b> The evaluation scheme may slightly deviate and is subject
+to change without prior notice.
+</p>
+
+<div style="text-align:right;">
+<a class="topbtn" href="#top">↑ Top</a>
+</div>
 
 </div>
 
-<footer>
+<!-- ================================================= -->
 
-© 2026 Dr. Supantha Pandit
+<div class="card" id="plan">
 
-</footer>
+<h2>Tentative Course Plan</h2>
 
-</body>
-</html>
+<table>
+
+<tr>
+<th style="width:18%;">Unit</th>
+<th>Topics</th>
+<th style="width:10%;">Lectures</th>
+</tr>
+
+<tr>
+<td><b>Introduction</b></td>
+<td>
+Introduction to Data Structures, representation of data,
+data types, abstract data types and motivation.
+</td>
+<td align="center">1</td>
+</tr>
+
+<tr>
+<td><b>Preliminaries</b></td>
+<td>
+Representation of data on a computer,
+arrays, linked list representations,
+representation of programs and associated data.
+</td>
+<td align="center">2</td>
+</tr>
+
+<tr>
+<td><b>Analysis Tools</b></td>
+<td>
+Running time of algorithms,
+performance measures,
+asymptotic analysis,
+recurrence relations.
+</td>
+<td align="center">3</td>
+</tr>
+
+<tr>
+<td><b>Dictionary Operations</b></td>
+<td>
+Find, Maximum, Minimum,
+Successor,
+Predecessor,
+Insert and Delete operations.
+</td>
+<td align="center">6</td>
+</tr>
+
+<tr>
+<td><b>List Data Structures</b></td>
+<td>
+Stacks,
+Queues,
+implementations using arrays and linked lists,
+Hash Tables.
+</td>
+<td align="center">6</td>
+</tr>
+
+<tr>
+<td><b>Sorting</b></td>
+<td>
+Comparison-based sorting,
+Bubble Sort,
+Merge Sort,
+Quick Sort,
+Heap Sort,
+lower bounds,
+best, worst and average case analysis.
+</td>
+<td align="center">9</td>
+</tr>
+
+<tr>
+<td><b>Order Statistics</b></td>
+<td>
+Maximum,
+Minimum,
+Median,
+Selection,
+Rank,
+Dynamic Order Statistics.
+</td>
+<td align="center">3</td>
+</tr>
+
+<tr>
+<td><b>Trees</b></td>
+<td>
+Heaps,
+Binary Search Trees,
+AVL Trees,
+Red-Black Trees,
+B-Trees,
+Tries.
+</td>
+<td align="center">9</td>
+</tr>
+
+<tr>
+<td><b>Graphs</b></td>
+<td>
+Adjacency Matrix,
+Adjacency List,
+Breadth-First Search (BFS),
+Depth-First Search (DFS).
+</td>
+<td align="center">3</td>
+</tr>
+
+</table>
+
+<p style="margin-top:20px;">
+<b>Note:</b> The course plan is tentative and may be revised depending
+upon academic requirements.
+</p>
+
+<div style="text-align:right;">
+<a class="topbtn" href="#top">↑ Top</a>
+</div>
+
+</div>
+
+<!-- ================================================= -->
+
+<div class="card" id="books">
+
+<h2>Textbook</h2>
+
+<ol>
+
+<li>
+Mark Allen Weiss,
+<i>Data Structures and Algorithm Analysis in C++</i>,
+4th Edition,
+Pearson Education,
+2013.
+</li>
+
+</ol>
+
+<h2>Reference Books</h2>
+
+<ol>
+
+<li>
+Thomas H. Cormen,
+Charles E. Leiserson,
+Ronald L. Rivest,
+and Clifford Stein,
+<i>Introduction to Algorithms</i>,
+4th Edition,
+MIT Press,
+2022.
+</li>
+
+<li>
+Michael T. Goodrich,
+Roberto Tamassia,
+and David M. Mount,
+<i>Data Structures and Algorithms in C++</i>,
+2nd Edition,
+John Wiley & Sons,
+2011.
+</li>
+
+<li>
+Debasis Samanta,
+<i>Classic Data Structures</i>,
+2nd Edition,
+PHI Learning Pvt. Ltd.,
+2008.
+</li>
+
+</ol>
+
+<div style="text-align:right;">
+<a class="topbtn" href="#top">↑ Top</a>
+</div>
+
+  </div>
+  
+  
+<!-- ================================================= -->
+
+<div class="card" id="lectures">
+
+<h2>Lecture Materials</h2>
+
+<table>
+
+<tr>
+<th style="width:15%;">Lecture</th>
+<th>Topic</th>
+<th>Material</th>
+</tr>
+
+<tr>
+<td>Lecture 1</td>
+<td>
+Introduction to Data Structures
+</td>
+<td>
+<a class="button">Note</a>
+</td>
+</tr>
+
+<tr>
+<td>Lecture 2</td>
+<td>
+Data types, Abstract data types (ADTs), Data structures, Brief introductions of different data structures
+</td>
+<td>
+<a href="#" class="button">Note</a>
+</td>
+</tr>
+
+
+
+</table>
+
+<div style="text-align:right;">
+<a class="topbtn" href="#top">↑ Top</a>
+</div>
+
+</div>
+
+
+
